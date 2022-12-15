@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Input } from './components/Input';
-import { Button } from './components/Button';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Layout from './components/layout/Layout';
+import Home from './components/Home';
+import Community from './components/Community';
+import LogIn from './components/LogIn';
 
 const Container = styled.div`
   max-width: 850px;
@@ -34,15 +35,18 @@ function App() {
   };
 
   return (
+    <BrowserRouter>
     <div className="App">
       <Container>
-        <Layout>
-          <h1>input and button</h1>
-          <Input type="text" value={value} onChange={onChange} />
-          <Button onClick={onClick} text="click alert" />
-        </Layout>
+      <Routes>
+        <Route path = '/' element = {<Home/>} />
+        <Route path = '/community' element = {<Community/>} />
+        <Route path = '/login' element = {<LogIn/>} />
+      </Routes>
+ 
       </Container>
     </div>
+    </BrowserRouter>
   );
 }
 
