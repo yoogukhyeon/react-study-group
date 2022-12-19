@@ -1,24 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Heeader = styled.div`
   width: 100%;
   height: 50px;
   background-color: #f5e2fb;
   display: flex;
-  `;
-  
+`;
+
 const Logo = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #05e2fb;
   float: left;
-  `
-const Spacer = styled.div` 
-flex-grow: 1;
-`
+`;
+const Spacer = styled.div`
+  flex-grow: 1;
+`;
 const MenuBtn = styled.div`
   background-color: #f1f1f1;
   height: 50px;
@@ -29,22 +29,24 @@ const MenuBtn = styled.div`
   :hover {
     background-color: bisque;
   }
-
-`
+`;
 export default function Header() {
+  const no = 1;
   return (
     <Heeader>
-      <Logo/>
-      <Spacer/>
+      <Logo />
+      <Spacer />
       <nav>
-      <Link to = "/"><MenuBtn>home</MenuBtn></Link>
-      <Link to = "/community"><MenuBtn>community</MenuBtn></Link>
-      <Link to = "/login"><MenuBtn>log in</MenuBtn></Link>
-    
+        <Link to="/">
+          <MenuBtn>home</MenuBtn>
+        </Link>
+        <Link to="/community">
+          <MenuBtn>community</MenuBtn>
+        </Link>
+        <Link to="/login">
+          <MenuBtn>log in</MenuBtn>
+        </Link>
       </nav>
-
-
-
 
       {/* 
         1. navi 

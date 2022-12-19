@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Home from './components/Home';
-import Community from './components/Community';
-import LogIn from './components/LogIn';
+import Home from './pages/Home';
+import Community from './pages/Community';
+import LogIn from './pages/LogIn';
 
 const Container = styled.div`
   max-width: 850px;
@@ -34,18 +34,18 @@ function App() {
     alert(`${value} 입력값을 입력받았습니다.`);
   };
 
+  const no = 1;
   return (
     <BrowserRouter>
-    <div className="App">
-      <Container>
-      <Routes>
-        <Route path = '/' element = {<Home/>} />
-        <Route path = '/community' element = {<Community/>} />
-        <Route path = '/login' element = {<LogIn/>} />
-      </Routes>
- 
-      </Container>
-    </div>
+      <div className="App">
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/login" element={<LogIn />} />
+          </Routes>
+        </Container>
+      </div>
     </BrowserRouter>
   );
 }
